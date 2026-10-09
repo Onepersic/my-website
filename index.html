@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THREAD — магазин одежды</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <header>
+    <div class="container nav">
+      <a href="#top" class="logo">THREAD<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#catalog">Каталог</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" title="Сменить тему">🌙</button>
+        <button class="icon-btn" id="favBtn" title="Показать избранное">♥<span class="badge"
+            id="favCount">0</span></button>
+        <button class="icon-btn" id="cartBtn" title="Корзина">🛒<span class="badge" id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+
+    <section class="hero">
+      <h1>Одежда, в которой<br>хочется жить</h1>
+      <p>Новая осенняя коллекция уже в каталоге. Скидка 10% по промокоду <b>THREAD10</b></p>
+      <a href="#catalog" class="btn">Смотреть каталог</a>
+    </section>
+
+
+    <section id="catalog" class="container">
+      <h2 class="section-title">Каталог</h2>
+      <p class="section-sub">Выбирайте категорию, ищите по названию и сортируйте по цене.</p>
+
+      <div class="toolbar">
+        <div class="chips" id="chips"></div>
+        <input type="search" id="search" placeholder="Поиск по названию...">
+        <select id="sort">
+          <option value="default">Без сортировки</option>
+          <option value="asc">Сначала дешевле</option>
+          <option value="desc">Сначала дороже</option>
+        </select>
+      </div>
+
+      <div class="grid" id="grid"></div>
+    </section>
+
+    >
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2 class="section-title center">Наши услуги</h2>
+        <p class="section-sub center">Мы не только продаём одежду, но и помогаем с выбором.</p>
+
+        <div class="services">
+          <div class="service">
+            <div class="service-ico">🚚</div>
+            <h3>Доставка по стране</h3>
+            <p>Привезём заказ за 1–3 дня. При заказе от 5000 сом доставка бесплатная.</p>
+            <button class="link-btn" data-service="Доставка по стране">Заказать</button>
+          </div>
+          <div class="service">
+            <div class="service-ico">👗</div>
+            <h3>Примерка дома</h3>
+            <p>Курьер привезёт несколько размеров. Оплата только за то, что подошло.</p>
+            <button class="link-btn" data-service="Примерка дома">Заказать</button>
+          </div>
+          <div class="service">
+            <div class="service-ico">🎨</div>
+            <h3>Подбор образа</h3>
+            <p>Бесплатная консультация стилиста: соберём комплект под ваш стиль и бюджет.</p>
+            <button class="link-btn" data-service="Подбор образа">Заказать</button>
+          </div>
+          <div class="service">
+            <div class="service-ico">✂️</div>
+            <h3>Подгонка по фигуре</h3>
+            <p>Наше ателье подгонит длину и посадку: брюки, рукава, платья.</p>
+            <button class="link-btn" data-service="Подгонка по фигуре">Заказать</button>
+          </div>
+          <div class="service">
+            <div class="service-ico">🎁</div>
+            <h3>Подарочные карты</h3>
+            <p>Электронная карта номиналом от 1000 сом приходит на почту за минуту.</p>
+            <button class="link-btn" data-service="Подарочная карта">Заказать</button>
+          </div>
+          <div class="service">
+            <div class="service-ico">🔄</div>
+            <h3>Возврат и обмен</h3>
+            <p>30 дней на возврат или обмен, если вещь не подошла по размеру.</p>
+            <button class="link-btn" data-service="Возврат и обмен">Узнать</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact" class="container">
+      <h2 class="section-title center">Напишите нам</h2>
+      <p class="section-sub center">Ответим в течение дня.</p>
+
+      <form class="form-box" id="form" novalidate>
+        <div class="field" id="f-name">
+          <label for="name">Имя</label>
+          <input type="text" id="name">
+          <div class="err-msg"></div>
+        </div>
+        <div class="field" id="f-email">
+          <label for="email">Email</label>
+          <input type="email" id="email">
+          <div class="err-msg"></div>
+        </div>
+        <div class="field" id="f-msg">
+          <label for="msg">Сообщение</label>
+          <textarea id="msg" rows="4"></textarea>
+          <div class="err-msg"></div>
+        </div>
+        <button class="btn full" type="submit">Отправить</button>
+      </form>
+    </section>
+
+  </main>
+
+
+  <footer id="footer-contacts">
+    <div class="container footer-inner">
+      <div class="contacts">
+        <div class="contact"><span class="contact-label">Адрес</span>Улица Кукушкина, дом колотушкина<span
+            class="contact-value"></span></div>
+        <div class="contact"><span class="contact-label">Телефон</span>+996(705)556-911<span
+            class="contact-value"></span></div>
+        <div class="contact"><span class="contact-label">Email</span>oonepersic@gmail.com<span
+            class="contact-value"></span></div>
+        <div class="contact"><span class="contact-label">Режим работы</span>с dvd до dvd<span
+            class="contact-value"></span></div>
+        <div class="contact"><span class="contact-label">Instagram</span>THREAD.<span class="contact-value"></span>
+        </div>
+        <div class="contact"><span class="contact-label">Telegram</span>THREAD.<span class="contact-value"></span></div>
+      </div>
+      <p class="copyright">© 2026 THREAD. Лабораторная работа</p>
+    </div>
+  </footer>
+
+
+  <div class="overlay" id="overlay"></div>
+
+
+  <div class="modal" id="modal">
+    <img id="mImg" class="modal-img" src="" alt="">
+    <div class="modal-info">
+      <button class="icon-btn close-btn" id="mClose">✕</button>
+      <div class="card-cat" id="mCat"></div>
+      <h3 id="mName" class="modal-title"></h3>
+      <p id="mDesc" class="muted"></p>
+      <div class="price big" id="mPrice"></div>
+      <div class="sizes" id="mSizes"></div>
+      <button class="btn outline full" id="mFav"></button>
+      <button class="btn full" id="mAdd">Добавить в корзину</button>
+    </div>
+  </div>
+
+
+  <aside class="drawer" id="drawer">
+    <div class="drawer-head">
+      <h3>Корзина</h3>
+      <button class="icon-btn" id="dClose">✕</button>
+    </div>
+    <div class="drawer-body" id="cartList"></div>
+    <div class="drawer-foot">
+      <div class="promo">
+        <input id="promoInput" placeholder="Промокод">
+        <button id="promoBtn">OK</button>
+      </div>
+      <div class="promo-msg" id="promoMsg"></div>
+      <div class="total-row"><span>Итого:</span><span id="total">0 сом</span></div>
+      <button class="btn full" id="checkout">Оформить заказ</button>
+    </div>
+  </aside>
+
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
