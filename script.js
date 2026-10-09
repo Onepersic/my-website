@@ -132,7 +132,7 @@ function updateFavBtn() {
     $("#favBtn").classList.toggle("active", state.favOnly);
 }
 
-// Кнопка ♥ в шапке включает и выключает показ избранного
+
 $("#favBtn").addEventListener("click", () => {
     state.favOnly = !state.favOnly;
     if (state.favOnly && state.favs.length === 0) {
@@ -304,7 +304,7 @@ function updateBadges() {
     $("#favCount").textContent = state.favs.length;
 }
 
-// ===== Открытие и закрытие окон =====
+
 $("#cartBtn").addEventListener("click", () => {
     renderCart();
     $("#drawer").classList.add("show");
@@ -324,7 +324,7 @@ document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeAll();
 });
 
-// ===== Тёмная тема =====
+
 function applyTheme(dark) {
     document.body.classList.toggle("dark", dark);
     $("#themeBtn").textContent = dark ? "☀️" : "🌙";
@@ -335,7 +335,7 @@ $("#themeBtn").addEventListener("click", () => {
     applyTheme(!document.body.classList.contains("dark"));
 });
 
-// ===== Услуги: кнопка «Заказать» подставляет текст в форму =====
+
 document.querySelectorAll("[data-service]").forEach(btn => {
     btn.addEventListener("click", () => {
         $("#msg").value = `Здравствуйте! Хочу заказать услугу: «${btn.dataset.service}».`;
